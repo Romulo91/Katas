@@ -7,7 +7,14 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
+// first solution
+// function palindrome(str) {
+//   const reverse = str.split("").reduce((ac, cur) => cur + ac, "");
+//   return str === reverse; // gibt einen bolien zuück
+// }
+
 function palindrome(str) {
-  const reverse = str.split("").reduce((ac, cur) => cur + ac, "");
-  return str === reverse; // gibt einen bolien zuück
+  return str.split("").every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
 }
