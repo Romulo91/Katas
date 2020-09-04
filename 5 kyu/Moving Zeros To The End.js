@@ -9,7 +9,13 @@ var moveZeros = function (arr) {
   const b = [];
   const l = [];
   for (let i in arr) {
-    arr[i] != 0 ? b.push(arr[i]) : l.push(arr[i]);
+    arr[i] !== 0 ? b.push(arr[i]) : l.push(arr[i]);
   }
   return b.concat(l);
+};
+
+// solution 2
+
+const moveZeros = (arr) => {
+  return arr.filter((i) => i !== 0).concat(arr.filter((i) => i === 0));
 };
