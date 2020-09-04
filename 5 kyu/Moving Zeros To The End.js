@@ -4,6 +4,8 @@
 
 // moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
 
+// Solution I
+
 var moveZeros = function (arr) {
   // TODO: Program me
   const b = [];
@@ -14,7 +16,7 @@ var moveZeros = function (arr) {
   return b.concat(l);
 };
 
-// solution 2
+// solution II
 
 const moveZeros = (arr) => {
   return arr.filter((i) => i !== 0).concat(arr.filter((i) => i === 0));
