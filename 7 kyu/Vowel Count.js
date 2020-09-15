@@ -6,6 +6,8 @@
 
 // The input string will only consist of lower case letters and/or spaces.
 
+// 1. solution
+
 function getCount(str) {
   var vowelsCount = 0;
 
@@ -16,4 +18,14 @@ function getCount(str) {
   });
 
   return vowelsCount;
+}
+
+function getCount(str) {
+  return str.split("").filter((c) => "aeiouAEIOU".includes(c)).length;
+}
+
+// 2. solution
+
+function getCount(str) {
+  return str.split("").filter((i) => "aeiouAEIOU".includes(i)).length;
 }
