@@ -33,3 +33,10 @@ function anagrams(word, words) {
   }
   return res;
 }
+
+// 2. solution
+
+function anagrams(word, words) {
+  comp = word.split("").sort().join("");
+  return words.filter((i) => comp === i.split("").sort().join(""));
+}
