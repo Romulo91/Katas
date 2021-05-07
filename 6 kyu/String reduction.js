@@ -4,9 +4,7 @@
 
 function solve(a, b) {
   let res = [...a].reduce((ac, cu) => ((ac[cu] = ac[cu] + 1 || 1), ac), {});
-  console.log(res);
   for (let i in b) {
-    console.log(b[i]);
     if (res[b[i]] > 0) {
       res[b[i]] = res[b[i]] - 1;
     } else return 0;
