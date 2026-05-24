@@ -53,3 +53,16 @@ function towerBuilder(nFloors) {
     return result
 }
 
+
+//
+
+function towerBuilder(nFloors) {
+    // build here
+    let space,star, result = [];
+    for(i = 1; i <= nFloors; i++){
+        space = " ".repeat(nFloors - i);
+        star  = "*".repeat((2*i) - 1);
+        result.push(`${space}${star}${space}`);
+    }
+    return result
+}
